@@ -39,7 +39,15 @@ buildscript {
 
 plugins {
     // SonarQube : https://plugins.gradle.org/plugin/org.sonarqube
-    id "org.sonarqube" version "2.5"
+    id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "ica1006_go-bees"
+    property "sonar.organization", "ica1006"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 allprojects {
